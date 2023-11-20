@@ -41,6 +41,17 @@ class PersonnesController extends Controller
     {
         try{
             $personne = new Personne($request->all());
+            $uploadedFile = $request->file('photo');
+            $nomFichierUnique = str_replace(" ","_", $personne->nom) . "-". uniqid() . "." . $uploadedFile->extension();
+            try{
+                $request->photo->move(public_path('img/personnes'), $nomFichierUnique);
+            }catch(\Symfony\Component\HttpFoundation\File\Exception\FileException $e)
+            {
+                log::error("Erreur lors du téleversement du fichier." , $e);
+            }
+
+
+            $personne->photo = $nomFichierUnique;
             $personne->save();
         }catch(\Throwable $e)
         {
@@ -62,7 +73,7 @@ class PersonnesController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return View('personnes.edit', compact('personne'));
     }
 
     /**
@@ -70,7 +81,20 @@ class PersonnesController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        try{
+            $personne->nom = $request->nom;
+            $personne->dateNaissance = $request->dateNaissance;
+            $personne->lieuNaissance = $request->lieuNaissance;
+            $personne->type = $request->type;
+            $personne->photo = $request->photo;
+            $personne->save();
+            return redirect()->route('personnes.index')->with('message', "Modification de " . $personne->nom . " réussi!");
+        }catch(\Throwable $e)
+        {
+        
+            return redirect()->route('personnes.index')->with('message', "Modification de " . $personne->nom . "non");
+        }
+        return redirect()->route('personnes.index');
     }
 
     /**
@@ -78,6 +102,20 @@ class PersonnesController extends Controller
      */
     public function destroy(string $id)
     {
-        //
-    }
+        try{
+            $personne= Personne::findOrFail($id);
+       
+            
+                  
+            $personne->delete();
+                       return redirect()->route('personnes.index')->with('message', "Suppression de " . $personne->nom . " réussi!");
+          }
+          catch(\Throwable $e){
+             //Gérer l'erreur
+
+             return redirect()->route('personnes.index')->withErrors(['la suppression n\'a pas fonctionné']); 
+           }
+              return redirect()->route('personnes.index');
+      
+}
 }

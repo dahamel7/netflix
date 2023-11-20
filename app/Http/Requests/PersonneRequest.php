@@ -26,7 +26,7 @@ class PersonneRequest extends FormRequest
         'dateNaissance' => 'required|date',
         'lieuNaissance' => 'max:255',
         'type' => 'required|max:25',
-        'photo' => 'required|min:50|max:1080',        
+        'photo' => 'required|image|mimes:png,jpeg,jpg,gif|max:4096',        
                
         ];
     }
@@ -38,7 +38,7 @@ class PersonneRequest extends FormRequest
             'nom.required'=> 'le nom est requis',
             'lieuNaissance.max' => 'Le lieu doit avoir maximum 255 caractères.',
             'type.required' => 'le type est requis',
-            'photo.min' => 'la photo doit avoir au moins 50 catactères.',
+            'photo.required' => 'Le type de fichier n\' est pas reconnu.',
             'photo.required' => 'la photo est requis',
             'photo.max' => 'la photo doit avoir maximum 1080 catactères.'
 

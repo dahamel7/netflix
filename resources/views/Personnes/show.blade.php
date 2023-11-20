@@ -33,7 +33,11 @@
                         <p>Date de naissance {{ $personne->dateNaissance }}</p>
                         <p>Lieu de sa naissance - {{ $personne->lieuNaissance }}</p>
                     </div>
-
+                    @role('admin')
+                    <div id="Modif"> 
+                    <a href="{{route('personnes.edit', [$personne])}}"><img src='https://mecanizadosdelvinalopo.com/wp-content/uploads/2017/06/mantenimiento-mecanizados-dise%C3%B1o-fabricacion-maquinaria-industrial-alicante-capacidades-mecanizados-vinalopo.png'  alt="modifier" id="modifier"></a>
+                    </div>
+                    @endrole
                     <div id="option"> 
                         <p>Info</p>
                         <p>Film</p>
@@ -49,7 +53,7 @@
                 </div>
 
                 <div id="div_img">
-                    <img src="{{ $personne->photo }}" alt="<?php echo $personne->nom; ?>">
+                    <img src="{{ asset('img/personnes/'. $personne->photo)}}" alt="<?php echo $personne->nom; ?>">
                 </div>
             </div>
         @else

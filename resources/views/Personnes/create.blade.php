@@ -1,52 +1,34 @@
 
-<head>
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
 @extends('layouts.app')
 
    
 @section('contenu')
 
-<div class="container-fluid">
-   <div class="row">
-      <div class="col-3"></div>
-      <div class="col-6">
-         <form method="post" action="{{ route('personnes.store') }}">
-         @csrf
-            <div id="input_div">
-               <span></span>
-               <h4>Ajout d'une Personne</h4>
-            </div>
-            <div id="input_div">
-               <label for="nom">Nom</label>
-               <input type="text" id="inputAdmin" placeholder="Nom de la personne" name="nom">
-            </div>
-            <div id="input_div">
-               <label for="dateNaissance">Date de naissance</label>
-               <input type="text" id="inputAdmin" placeholder="Date de naissance de la personne" name="dateNaissance">
-            </div>
-            <div id="input_div">
-               <label for="lieuNaissance">Lieu de naissance</label>
-               <input type="text" id="inputAdmin" placeholder="Lieu de naissance de la personne" name="lieuNaissance">
-            </div>
-            <div id="input_div">
-               <label for="type">Type</label>
-               <input type="text" id="inputAdmin" placeholder="type" name="type">
-            </div>
-            <div id="input_div">
-               <label for="photo">Photo</label>
-               <input type="text" id="inputAdmin" placeholder="photo de la personne" name="photo">
-            </div>
-
-            <div id="input_div">
-               <span></span>
-               <button type="submit" id="inputAdminEnregistrer">Enregistrer</button>
-            </div>
-         </form>
-      </div>
-      <div class="col-3"></div>
+<form method="post" action="{{ route('personnes.store') }}" enctype="multipart/form-data">
+@csrf
+   <div class="form-group">
+      <label for="nom">Nom de la personne</label>
+       <input type="text" class="form-control" id="nom" placeholder="Nom de la personne" name="nom">
    </div>
-</div>
+   <div class="form-group">
+      <label for="dateNaissance">Date de naissance de la personne</label>
+       <input type="text" class="form-control" id="dateNaissance" placeholder="Date de naissance de la personne" name="dateNaissance">
+   </div>
+   <div class="form-group">
+      <label for="lieuNaissance">Lieu de naissance de la personne</label>
+       <input type="text" class="form-control" id="lieuNaissance" placeholder="Lieu de naissance de la personne" name="lieuNaissance">
+   </div>
+   <div class="form-group">
+      <label for="type">type de personne</label>
+       <input type="text" class="form-control" id="type" placeholder="type" name="type">
+   </div>
+   <div class="form-group">
+      <label for="photo">photo de la personne</label>
+       <input type="file" class="form-control" id="photo" placeholder="photo de la personne" name="photo">
+   </div>
+
+<button type="submit" class="btn btn-danger">Enregistrer</button>
+</form>
 
 
 @endsection

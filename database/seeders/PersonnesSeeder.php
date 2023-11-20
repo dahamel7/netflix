@@ -20,7 +20,7 @@ class PersonnesSeeder extends Seeder
                 'dateNaissance' => '2 Septembre 1964',
                 'lieuNaissance' => 'Beyrouth, Liban',
                 "type" => 'acteur',
-                'photo' => 'https://static4.businessinsider.com/image/5cc9c5c2e9f08a13fb2b5abc-1753/keanu%20reeves.jpg'
+                'photo' => 'Keanu_Reeves-655ba4ab6394c.jpg'
             ],
             [
                 'id' => 2,
@@ -28,7 +28,7 @@ class PersonnesSeeder extends Seeder
                 'dateNaissance' => '30 Juillet 1961',
                 'lieuNaissance' => 'Augusta, États-Unis',
                 "type" => 'acteur',
-                'photo' => 'https://th.bing.com/th/id/R.cff631b49fb9fd14334119d98daaa0e5?rik=043mVb6Ci1pIFw&pid=ImgRaw&r=0'
+                'photo' => 'Laurence_Fishburne-655b9f4a212d8.jpg'
             ],
             [
                 'id' => 3,
@@ -36,7 +36,7 @@ class PersonnesSeeder extends Seeder
                 'dateNaissance' => '30 juillet 1947 ',
                 'lieuNaissance' => 'Thal, Autriche',
                 "type" => 'acteur',
-                'photo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Arnold_Schwarzenegger_by_Gage_Skidmore_3.jpg/1200px-Arnold_Schwarzenegger_by_Gage_Skidmore_3.jpg'
+                'photo' => 'Arnold_Schwarzenegger-655b9fb376960.jpg'
             ],
             [
                 'id' => 4,
@@ -44,7 +44,7 @@ class PersonnesSeeder extends Seeder
                 'dateNaissance' => '3 juillet 1962',
                 'lieuNaissance' => 'Syracuse, État de New York',
                 "type" => 'acteur',
-                'photo' => 'https://images.mubicdn.net/images/cast_member/2184/cache-2992-1547409411/image-w856.jpg'
+                'photo' => 'Tom_Cruise-655ba06fee3d8.jpg'
             ],
             [
                 'id' => 5,
@@ -52,7 +52,7 @@ class PersonnesSeeder extends Seeder
                 'dateNaissance' => '18 juillet 1967',
                 'lieuNaissance' => 'Alameda, Californie',
                 "type" => 'acteur',
-                'photo' => 'https://imgs.search.brave.com/fm6ylgK2_LCP6wlPhxE3Rb0HH-Pr5c0IZpqXL9BcbOQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtaW4uYm1zY2Ru/LmNvbS9pZWRiL2Fy/dGlzdC9pbWFnZXMv/d2Vic2l0ZS9wb3N0/ZXIvbGFyZ2Uvdmlu/LWRpZXNlbC01MDA3/LTIyLTEyLTIwMTct/MTAtMTctMjMuanBn'
+                'photo' => 'Vin_Diesel-655ba128030fc.jpg'
             ],
             [
                 'id' => 6,
@@ -60,7 +60,7 @@ class PersonnesSeeder extends Seeder
                 'dateNaissance' => '7 janvier 1964',
                 'lieuNaissance' => 'Long Beach, Californie',
                 "type" => 'acteur',
-                'photo' => 'https://cdn.britannica.com/64/135864-050-57268027/Nicolas-Cage-2009.jpg'
+                'photo' => 'Nicolas_Cage-655ba1b3b0091.jpg'
             ],
             [
                 'id' => 7,
