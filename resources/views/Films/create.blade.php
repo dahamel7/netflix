@@ -29,27 +29,27 @@
                 </div>
 
                 <div id="input_div">
-                    <label for="titre" id="inputLabel_films">Titre du film</label>
+                    <p id="inputLabel_films">Titre du film</p>
                     <input type="text" id="inputAdmin" placeholder="Titre du film" name="titre">
                 </div>
 
                 <div id="input_div">
-                    <label for="categorie" id="inputLabel_films">Catégorie</label>
+                    <p id="inputLabel_films">Catégorie</p>
                     <input type="text" id="inputAdmin" placeholder="Catégorie" name="categorie">
                 </div>
                 
                 <div id="input_div">
-                    <label for="resume" id="inputLabel_films">Résumé</label>
+                    <p id="inputLabel_films">Résumé</p>
                     <textarea type="text" id="inputAdmin" placeholder="Résumé du film" name="resume" rows="4" cols="50"></textarea>
                 </div>
                 
                 <div id="input_div">
-                    <label for="pochette" id="inputLabel_films">Pochette</label>
+                    <p id="inputLabel_films">Pochette</p>
                     <input type="url" id="inputAdmin" placeholder="URL de l'affiche" name="pochette">
                 </div>
                 
                 <div id="input_div">
-                    <label for="realisateur" id="inputLabel_films">Réalisateur</label>
+                    <p id="inputLabel_films">Réalisateur</p>
                     
                     <select id="inputAdmin" name="personne_id">
                         <option value="" selected>Veuillez choisir un réalisateur</option>
@@ -60,17 +60,17 @@
                 </div>
                 
                 <div id="input_div">
-                    <label for="duree" id="inputLabel_films">Durée du film</label>
+                    <p id="inputLabel_films">Durée du film</p>
                     <input type="number" id="inputAdmin" placeholder="Durée du film" name="duree">
                 </div>
 
                 <div id="input_div">
-                    <label for="annee" id="inputLabel_films">Année de sortie</label>
+                    <p id="inputLabel_films">Année de sortie</p>
                     <input type="text" id="inputAdmin" placeholder="Année de sortie" name="annee">
                 </div>
                 
                 <div id="input_div">
-                    <label for="rating" id="inputLabel_films">Rating</label>
+                    <p id="inputLabel_films">Rating</p>
                     <input type="text" id="inputAdmin" placeholder="Rating" name="rating">
                 </div>
 

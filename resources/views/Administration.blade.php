@@ -14,40 +14,53 @@
 <body>
     <form method="POST" action="{{route('films.storeRealisateur')}}">
         @csrf
+    <div class="container-fluid">
 
-        <div id="input_div">
-            <span></span>
-            <a href="{{route('films.create')}}" id="liens">Creation d'un film</a>
-        </div>
+        <div class="row form-group" id="input_groupe">
 
-        <div id="input_div">
-            <span></span>
-            <p>Ajouter des relations entre les films et les personnes.</p>
-        </div>
-        <div id="input_div">
-            <span></span>
-            <select class="form-control" id="inputAdmin" name="film_id">
-                <option value="" selected>Veuillez choisir un film</option>
-                @foreach($films as $film)
-                <option value="{{ $film->id }}">{{ $film->titre }}</option>
-                @endforeach 
-            </select>
-        </div>
-            
-        <div id="input_div">
-            <span></span>
-            <select class="form-control" id="inputAdmin" name="acteur_id">
-                <option value="" selected>Veuillez choisir un acteur</option>
-                @foreach($acteurs as $personne)
-                <option value="{{ $personne->id }}">{{ $personne->nom }}</option>
-                @endforeach 
-            </select>
-        </div>
+            <div class="col-2"></div>
 
-        <div id="input_div">
-            <span></span>
-            <button type="submit" id="inputAdminEnregistrer">Joindre</button>
+            <div class="col-8">
+
+                <div id="input_div">
+                    <span></span>
+                    <a href="{{route('films.create')}}" id="liens">Creation d'un film</a>
+                </div>
+
+                <div id="input_div">
+                    <span></span>
+                    <p>Ajouter des relations entre les films et les personnes.</p>
+                </div>
+                <div id="input_div">
+                    <span></span>
+                    <select id="inputAdmin" name="film_id">
+                        <option value="" selected>Veuillez choisir un film</option>
+                        @foreach($films as $film)
+                        <option value="{{ $film->id }}">{{ $film->titre }}</option>
+                        @endforeach 
+                    </select>
+                </div>
+                    
+                <div id="input_div">
+                    <span></span>
+                    <select id="inputAdmin" name="acteur_id">
+                        <option value="" selected>Veuillez choisir un acteur</option>
+                        @foreach($acteurs as $personne)
+                        <option value="{{ $personne->id }}">{{ $personne->nom }}</option>
+                        @endforeach 
+                    </select>
+                </div>
+
+                <div id="input_div">
+                    <span></span>
+                    <button type="submit" id="inputAdminEnregistrer">Joindre</button>
+                </div>
+            </div>
+
+            <div class="col-2"></div>
+
         </div>
+    </div>
     </form>
 
 </body>

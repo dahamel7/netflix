@@ -43,7 +43,7 @@
                     </div>
 
                     <div id="option"> 
-                        <a href="{{route('films.edit',[$film]) }}" class="btn btn-primary" id="liens">Editer le film</a>
+                        <a href="{{route('films.edit',[$film]) }}" id="liens">Editer le film</a>
 
                         <a href="/" id="liens">Retour aux Films</a>
 

@@ -6,16 +6,23 @@
 
 <form method="post" action="{{ route('usagers.login') }}">
 @csrf
-   <div class="form-group">
-      <label for="email">Enter votre email</label>
-       <input type="text" class="form-control" id="email" placeholder="Email:" name="email">
+   <div id="input_div">
+      <span></span>
+      <p>Connexion</p>
    </div>
-   <div class="form-group">
+   <div id="input_div">
+      <label for="email">Enter votre email</label>
+      <input type="text" id="inputAdmin" placeholder="Email:" name="email">
+   </div>
+   <div id="input_div">
       <label for="password">Mot de passe</label>
-       <input type="text" class="form-control" id="password" placeholder=" Mot de passe" name="password">
+      <input type="text" id="inputAdmin" placeholder=" Mot de passe" name="password">
    </div>
 
-<button type="submit" class="btn btn-danger">Soumettre</button>
+   <div id="input_div">
+      <span></span>
+      <button type="submit" id="inputAdminEnregistrer">Soumettre</button>
+   </div>
 </form>
 
 
