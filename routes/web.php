@@ -6,6 +6,7 @@ use App\Http\Controllers\AdministrationController;
 use App\Http\Controllers\PokemonsController;
 use App\Http\Controllers\FilmsController;
 use App\Http\Controllers\PersonnesController;
+use App\Http\Controllers\UsagersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
