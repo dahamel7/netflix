@@ -6,9 +6,9 @@
 @section('contenu')
 
 <section class="main-container">
-
-<a class="btn btn-danger"  href="{{route('personnes.create')}}" id="liens">Ajouter une personne</a>
-
+@role('admin')
+<a class="btn btn-danger"  href="{{route('personnes.create')}}">Ajouter une personne</a>
+@endrole
 
       <div class="location" id="home">
           <h1 id="home">Acteurs</h1>
@@ -17,18 +17,18 @@
               <?php $ctr = 0; ?>
                 @foreach($acteurs as $personne)
                   <?php $ctr++;
-                    if($ctr <= 6) {
+                 
                   ?>
                     <div id="div_box">
-                      <a href="{{route('personnes.show', [$personne])}}"><img src='<?php echo $personne->photo; ?>' alt="<?php echo $personne->nom; ?>"></a>
+                      <a href="{{route('personnes.show', [$personne])}}"><img src="{{ asset('img/personnes/'. $personne->photo)}}" alt="<?php echo $personne->nom; ?>"></a>
                       <h3 id="div_box_titre"><?php echo $personne->nom; ?></h3>
                     </div>
-                  <?php 
-                    }
-                  ?>
+                  
+                    
+                  
                 @endforeach
             @else
-              <h2>Aucun film a affiché</h2>
+              <h2>Aucune personne a affiché</h2>
             @endif
           </div>
       </div>
