@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use App\Models\Usager;
 
 class UsagersController extends Controller
 {
@@ -43,7 +43,8 @@ class UsagersController extends Controller
 
     public function index()
     {
-        //
+        $usagers = Usager::all();
+        return view('usagers.index', compact('usagers'));
     }
 
     /**

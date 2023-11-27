@@ -34,6 +34,11 @@
 
                 <div id="input_div">
                     <span></span>
+                    <a href="{{route('usagers.index')}}" id="liens">Voir la liste des Usagers</a>
+                </div>
+
+                <div id="input_div">
+                    <span></span>
                     <p>Ajouter des relations entre les films et les personnes.</p>
                 </div>
                 <div id="input_div">

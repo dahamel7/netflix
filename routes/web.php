@@ -64,6 +64,9 @@ Route::delete('/personnes/supprimer/{personne}',
 Route::get('personne/{personne}',
 [PersonnesController::class,'show'])->name('personnes.show');
 
+Route::get('/Usager',
+[UsagersController::class,'index'])->name('usagers.index');
+
 Route::get('/login',
 [UsagersController::class,'showLoginForm'])->name('usagers.show');
 
