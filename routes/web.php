@@ -24,7 +24,7 @@ Route::get('/', function () {
 */
 Route::get('/', [NetflixController::class, 'index'])->name('netflix.index');
 
-Route::get('/films.create', [NetflixController::class, 'create'])->name('films.create');
+Route::get('/films/create', [NetflixController::class, 'create'])->name('films.create');
 Route::post('/films.store', [NetflixController::class, 'store'])->name('films.store');
 Route::post('/films.storeRealisateur', [NetflixController::class, 'storeRealisateur'])->name('films.storeRealisateur');
 Route::get('/films/edit/{film}', [NetflixController::class, 'edit'])->name('films.edit');

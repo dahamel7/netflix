@@ -38,10 +38,9 @@ class PersonneRequest extends FormRequest
             'nom.required'=> 'le nom est requis',
             'lieuNaissance.max' => 'Le lieu doit avoir maximum 255 caractères.',
             'type.required' => 'le type est requis',
-            'photo.required' => 'Le type de fichier n\' est pas reconnu.',
+            'photo.mimes' => 'Le type de fichier n\' est pas reconnu.',
             'photo.required' => 'la photo est requis',
             'photo.max' => 'la photo doit avoir maximum 1080 catactères.'
-
         ];
     }
 }

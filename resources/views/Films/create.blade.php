@@ -14,7 +14,7 @@
     <title>Netflix - Creation de Film</title>
 </head>
 <body>
-    <form method="post" action="{{ route('films.store') }}">
+    <form method="post" action="{{ route('films.store') }}" enctype="multipart/form-data">
     @csrf
     <div class="container-fluid">
 
@@ -23,35 +23,36 @@
             <div class="col-3"></div>
 
             <div class="col-6">
+
                 <div id="input_div">
                     <span></span>
-                    <h4>Ajout d'un Film</h4>
+                    <h5>Ajout d'un Film</h5>
                 </div>
 
                 <div id="input_div">
-                    <p id="inputLabel_films">Titre du film</p>
+                    <p id="inputLabel">Titre du film</p>
                     <input type="text" id="inputAdmin" placeholder="Titre du film" name="titre">
                 </div>
 
                 <div id="input_div">
-                    <p id="inputLabel_films">Catégorie</p>
+                    <p id="inputLabel">Catégorie</p>
                     <input type="text" id="inputAdmin" placeholder="Catégorie" name="categorie">
                 </div>
                 
                 <div id="input_div">
-                    <p id="inputLabel_films">Résumé</p>
+                    <p id="inputLabel">Résumé</p>
                     <textarea type="text" id="inputAdmin" placeholder="Résumé du film" name="resume" rows="4" cols="50"></textarea>
                 </div>
                 
                 <div id="input_div">
-                    <p id="inputLabel_films">Pochette</p>
-                    <input type="url" id="inputAdmin" placeholder="URL de l'affiche" name="pochette">
+                    <p id="inputLabel">Pochette</p>
+                    <input type="file" id="inputAdmin" placeholder="Photo" name="pochette">
                 </div>
                 
                 <div id="input_div">
-                    <p id="inputLabel_films">Réalisateur</p>
+                    <p id="inputLabel">Réalisateur</p>
                     
-                    <select id="inputAdmin" name="personne_id">
+                    <select id="inputAdmin" name="personnes_id">
                         <option value="" selected>Veuillez choisir un réalisateur</option>
                         @foreach($personnes as $personne)
                         <option value="{{ $personne->id }}">{{ $personne->nom }}</option>
@@ -60,17 +61,17 @@
                 </div>
                 
                 <div id="input_div">
-                    <p id="inputLabel_films">Durée du film</p>
+                    <p id="inputLabel">Durée du film</p>
                     <input type="number" id="inputAdmin" placeholder="Durée du film" name="duree">
                 </div>
 
                 <div id="input_div">
-                    <p id="inputLabel_films">Année de sortie</p>
+                    <p id="inputLabel">Année de sortie</p>
                     <input type="text" id="inputAdmin" placeholder="Année de sortie" name="annee">
                 </div>
                 
                 <div id="input_div">
-                    <p id="inputLabel_films">Rating</p>
+                    <p id="inputLabel">Rating</p>
                     <input type="text" id="inputAdmin" placeholder="Rating" name="rating">
                 </div>
 

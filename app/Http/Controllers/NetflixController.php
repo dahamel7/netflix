@@ -49,7 +49,17 @@ class NetflixController extends Controller
     {
         try {
             $film = new Film($request->all());
+            $uploadedFile = $request->file('pochette');
+            $nomFichierUnique = str_replace(" ","_", $film->titre) . "-" . uniqid() . "." . $uploadedFile->extension();
+
+            try {
+                $request->pochette->move(public_path('img/films'), $nomFichierUnique);
+            } catch(\Symfony\Component\HttpFoundation\File\Exception\FileException $e)
+            {
+                log::error("Erreur lors du téleversement du fichier." , $e);
+            }
             
+            $film->pochette = $nomFichierUnique;
             $film->save();
         }
         catch (\Throwable $e) {

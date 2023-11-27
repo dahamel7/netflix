@@ -24,7 +24,12 @@
 
                 <div id="input_div">
                     <span></span>
-                    <a href="{{route('films.create')}}" id="liens">Creation d'un film</a>
+                    <a href="{{route('films.create')}}" id="liens">Ajout d'un film</a>
+                </div>
+
+                <div id="input_div">
+                    <span></span>
+                    <a href="{{route('films.create')}}" id="liens">Ajout d'une personne</a>
                 </div>
 
                 <div id="input_div">
