@@ -11,7 +11,7 @@ class Film extends Model
     protected $table = 'films';
     protected $fillable = ['titre','categorie', 'resume', 'pochette', 'personnes_id', 'duree', 'annee', 'rating'];
 
-    public function realisateur() : BelongsTo {
+    public function personnes_id() : BelongsTo {
         return $this->belongsTo(Personne::class);
     }
 }

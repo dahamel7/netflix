@@ -46,7 +46,7 @@
                 
                 <div id="input_div">
                     <p id="inputLabel">Pochette</p>
-                    <input type="file" id="inputAdmin" placeholder="Photo" name="pochette">
+                    <input type="file" id="inputAdmin" name="pochette">
                 </div>
                 
                 <div id="input_div">

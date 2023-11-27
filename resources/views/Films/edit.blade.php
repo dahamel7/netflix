@@ -37,27 +37,27 @@
                             @method('PATCH')
 
                                 <div id="input_div">
-                                    <p id="inputLabel_films">Titre du film</p>
+                                    <p id="inputLabel">Titre du film</p>
                                     <input type="text" id="inputAdmin" value="{{ old('titre', $film) }}" name="titre">
                                 </div>
                             
                                 <div id="input_div">
-                                    <p id="inputLabel_films">Catégorie du film</p>
+                                    <p id="inputLabel">Catégorie du film</p>
                                     <input type="text" id="inputAdmin" value="{{ old('categorie', $film->categorie) }}" name="categorie">
                                 </div>
                             
                                 <div id="input_div">
-                                    <p id="inputLabel_films">Résumé</p>
+                                    <p id="inputLabel">Résumé</p>
                                     <input type="text" id="inputAdmin" value="{{ old('resume', $film->resume) }}" name="resume">
                                 </div>
                                 
                                 <div id="input_div">
-                                    <p id="inputLabel_films">Pochette</p>
+                                    <p id="inputLabel">Pochette</p>
                                     <input type="text" id="inputAdmin" value="{{ old('pochette', $film->pochette) }}" name="pochette">
                                 </div>
                                 
                                 <div id="input_div">
-                                    <p id="inputLabel_films">Réalisateur</p>
+                                    <p id="inputLabel">Réalisateur</p>
                     
                                     <select id="inputAdmin" name="personne_id">
                                         <option value="{{ old('personnes_id', $film->personnes_id) }}" selected>Veuillez choisir un réalisateur</option>
@@ -68,17 +68,17 @@
                                 </div>
                                 
                                 <div id="input_div">
-                                    <p id="inputLabel_films">Durée du film</p>
+                                    <p id="inputLabel">Durée du film</p>
                                     <input type="text" id="inputAdmin" value="{{ old('duree', $film->duree) }}" name="duree">
                                 </div>
                                 
                                 <div id="input_div">
-                                    <p id="inputLabel_films">Année de sortie</p>
+                                    <p id="inputLabel">Année de sortie</p>
                                     <input type="text" id="inputAdmin" value="{{ old('annee', $film->annee) }}" name="annee">
                                 </div>
                             
                                 <div id="input_div">
-                                    <p id="inputLabel_films">Rating</p>
+                                    <p id="inputLabel">Rating</p>
                                     <input type="text" id="inputAdmin" value="{{ old('rating', $film->rating) }}" name="rating">
                                 </div>
                             

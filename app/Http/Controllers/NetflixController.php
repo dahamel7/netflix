@@ -45,26 +45,30 @@ class NetflixController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(FilmRequest $request)
+    public function store(Request $request)
     {
         try {
+            //dd($request->file('pochette'));
             $film = new Film($request->all());
             $uploadedFile = $request->file('pochette');
             $nomFichierUnique = str_replace(" ","_", $film->titre) . "-" . uniqid() . "." . $uploadedFile->extension();
-
+            //dd($request->all());
             try {
                 $request->pochette->move(public_path('img/films'), $nomFichierUnique);
+                Log::debug("Copié.");
             } catch(\Symfony\Component\HttpFoundation\File\Exception\FileException $e)
             {
-                log::error("Erreur lors du téleversement du fichier." , $e);
+                Log::error("Erreur lors du téleversement du fichier." , [$e]);
             }
             
             $film->pochette = $nomFichierUnique;
             $film->save();
+            return redirect()->route('netflix.index')->with('message', "Ajout de le film " . $film->titre . " réussi!");
         }
         catch (\Throwable $e) {
             //Gérer l'erreur
             Log::debug($e);
+            return redirect()->route('netflix.index')->withErrors("L'ajout du film n'a pas fonctionné.");
         }
         return redirect()->route('netflix.index');
     }

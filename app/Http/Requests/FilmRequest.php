@@ -44,7 +44,7 @@ class FilmRequest extends FormRequest
 
 
             'pochette.mimes' => 'Le type de fichier n\'est pas reconnu (png, jpeg, jpg, gif).',
-            'pochette.max' => 'Latailledel\'imagenepeutpasdépasser4096Kb.'
+            'pochette.max' => 'La taille de l\'image ne peut pas dépasser 4096Kb.'
         ];
         
     }

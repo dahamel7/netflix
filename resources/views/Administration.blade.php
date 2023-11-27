@@ -29,7 +29,7 @@
 
                 <div id="input_div">
                     <span></span>
-                    <a href="{{route('films.create')}}" id="liens">Ajout d'une personne</a>
+                    <a href="{{route('personnes.create')}}" id="liens">Ajout d'une personne</a>
                 </div>
 
                 <div id="input_div">
