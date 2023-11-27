@@ -6,7 +6,7 @@
 
 <div class="row text-center">
     <div class="col-12 lien">
-    <a href="ajouter.php" class="btn btn-danger text-center " >ajouter un nouvel usager</a>
+    <a href="{{route('usagers.create')}}" class="btn btn-danger text-center " >ajouter un nouvel usager</a>
   </div>
 </div>
   <table class="table text-center">

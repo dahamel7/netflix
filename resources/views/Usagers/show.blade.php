@@ -23,7 +23,14 @@
       <span></span>
       <button type="submit" id="inputAdminEnregistrer">Soumettre</button>
    </div>
+   
+   <div class="col-12 lien">
+    <a href="{{route('usagers.create')}}" class="btn btn-danger text-center " >ajouter un nouvel usager</a>
+  </div>
 </form>
+
+
+
 
 
 
