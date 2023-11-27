@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use App\Models\Usager;
+use App\Http\Requests\UsagerRequest;
 
 class UsagersController extends Controller
 {
@@ -43,7 +44,8 @@ class UsagersController extends Controller
 
     public function index()
     {
-        //
+        $usagers = Usager::all();
+        return view('usagers.index', compact('usagers'));
     }
 
     /**
@@ -51,15 +53,24 @@ class UsagersController extends Controller
      */
     public function create()
     {
-        //
+        return View('usagers.create');
+
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(UsagerRequest $request)
     {
-        //
+        try{
+            $usager = new Usager($request->all());
+    
+            $usager->save();
+        }catch(\Throwable $e)
+        {
+            Log::debug($e);
+        }
+        return redirect()->route('/login');
     }
 
     /**

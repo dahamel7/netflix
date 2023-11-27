@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 
+
 class UsagersSeeder extends Seeder
 {
     /**
@@ -18,12 +19,12 @@ class UsagersSeeder extends Seeder
         DB::table('usagers')->insert([
             [
                 'id' => 1,
-                'nom' => 'Michaud',
-                'nomUsager' => 'Naijel',
-                'prenom'  => 'Loick',
-                'email' => 'loick.michaud2103@gmail.com',
+                'nom' => 'admin',
+                'nomUsager' => 'admin',
+                'prenom'  => 'admin',
+                'email' => 'admin@gmail.com',
                 "role" => 'admin',
-                'password'  => Hash::make('test123')
+                'password'  => Hash::make('admin')
             ],
             [
                 'id' => 2,
