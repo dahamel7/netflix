@@ -4,7 +4,7 @@
         
     }
     body {
-        background-image: url('{{ $film->pochette }}');
+        background-image: url("{{ asset('img/films/'. $film->pochette)}}");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -32,7 +32,7 @@
                     <div id="div_details">
                         
                         @if (isset($film))
-                            <form method="POST" action="{{route('films.update', [$film->id]) }}">
+                            <form method="POST" action="{{route('films.update', [$film->id]) }}" enctype="multipart/form-data">
                             @csrf
                             @method('PATCH')
 
@@ -53,16 +53,16 @@
                                 
                                 <div id="input_div">
                                     <p id="inputLabel">Pochette</p>
-                                    <input type="text" id="inputAdmin" value="{{ old('pochette', $film->pochette) }}" name="pochette">
+                                    <input type="file" id="inputAdmin" name="pochette">
                                 </div>
                                 
                                 <div id="input_div">
                                     <p id="inputLabel">Réalisateur</p>
                     
                                     <select id="inputAdmin" name="personne_id">
-                                        <option value="{{ old('personnes_id', $film->personnes_id) }}" selected>Veuillez choisir un réalisateur</option>
-                                        @foreach($personnes as $personne)
-                                        <option value="{{ $personne->id }}">{{ $personne->nom }}</option>
+                                        <option value="{{ old('personne_id', $film->personne_id) }}" selected>Veuillez choisir un réalisateur</option>
+                                        @foreach($realisateurs as $realisateur)
+                                        <option value="{{ $realisateur->id }}">{{ $realisateur->nom }}</option>
                                         @endforeach 
                                     </select>
                                 </div>

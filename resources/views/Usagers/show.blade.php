@@ -16,7 +16,7 @@
    </div>
    <div id="input_div">
       <label for="password">Mot de passe</label>
-      <input type="text" id="inputAdmin" placeholder=" Mot de passe" name="password">
+      <input type="password" id="inputAdmin" placeholder=" Mot de passe" name="password">
    </div>
 
    <div id="input_div">
@@ -24,8 +24,10 @@
       <button type="submit" id="inputAdminEnregistrer">Soumettre</button>
    </div>
    
-   <div class="col-12 lien">
-    <a href="{{route('usagers.create')}}" class="btn btn-danger text-center " >ajouter un nouvel usager</a>
+   <div id="input_div">
+      <span></span>
+      <a href="{{route('usagers.create')}}" id="liens">Créer un compte</a>
+   </div>
   </div>
 </form>
 

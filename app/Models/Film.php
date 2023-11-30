@@ -9,7 +9,7 @@ class Film extends Model
 {
     use HasFactory;
     protected $table = 'films';
-    protected $fillable = ['titre','categorie', 'resume', 'pochette', 'personnes_id', 'duree', 'annee', 'rating'];
+    protected $fillable = ['titre','categorie', 'resume', 'pochette', 'personne_id', 'duree', 'annee', 'rating'];
 
     public function personnes_id() : BelongsTo {
         return $this->belongsTo(Personne::class);
