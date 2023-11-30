@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('categorie', 64);
             $table->text('resume');
             $table->text('pochette');
-            $table->foreignId('personnes_id')->constrained('personne');
+            $table->foreignId('personne_id')->constrained('personnes');
             $table->unsignedBigInteger('duree');
             $table->text('annee');
             $table->text('rating');

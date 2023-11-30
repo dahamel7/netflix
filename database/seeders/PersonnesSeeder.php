@@ -123,7 +123,7 @@ class PersonnesSeeder extends Seeder
                 'nom' => 'producteur',
                 'dateNaissance' => '18 juillet 1967',
                 'lieuNaissance' => 'Alameda, Californie',
-                "type" => 'producteur',
+                "type" => 'produceur',
                 'photo' => 'https://imgs.search.brave.com/fm6ylgK2_LCP6wlPhxE3Rb0HH-Pr5c0IZpqXL9BcbOQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtaW4uYm1zY2Ru/LmNvbS9pZWRiL2Fy/dGlzdC9pbWFnZXMv/d2Vic2l0ZS9wb3N0/ZXIvbGFyZ2Uvdmlu/LWRpZXNlbC01MDA3/LTIyLTEyLTIwMTct/MTAtMTctMjMuanBn'
             ],
             [
@@ -131,31 +131,31 @@ class PersonnesSeeder extends Seeder
                 'nom' => 'producteur',
                 'dateNaissance' => '18 juillet 1967',
                 'lieuNaissance' => 'Alameda, Californie',
-                "type" => 'producteur',
+                "type" => 'produceur',
                 'photo' => 'https://imgs.search.brave.com/fm6ylgK2_LCP6wlPhxE3Rb0HH-Pr5c0IZpqXL9BcbOQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtaW4uYm1zY2Ru/LmNvbS9pZWRiL2Fy/dGlzdC9pbWFnZXMv/d2Vic2l0ZS9wb3N0/ZXIvbGFyZ2Uvdmlu/LWRpZXNlbC01MDA3/LTIyLTEyLTIwMTct/MTAtMTctMjMuanBn'
             ],
             [
                 'id' => 16,
-                'nom' => 'producteur',
+                'nom' => 'produceur',
                 'dateNaissance' => '18 juillet 1967',
                 'lieuNaissance' => 'Alameda, Californie',
-                "type" => 'producteur',
+                "type" => 'produceur',
                 'photo' => 'https://imgs.search.brave.com/fm6ylgK2_LCP6wlPhxE3Rb0HH-Pr5c0IZpqXL9BcbOQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtaW4uYm1zY2Ru/LmNvbS9pZWRiL2Fy/dGlzdC9pbWFnZXMv/d2Vic2l0ZS9wb3N0/ZXIvbGFyZ2Uvdmlu/LWRpZXNlbC01MDA3/LTIyLTEyLTIwMTct/MTAtMTctMjMuanBn'
             ],
             [
                 'id' => 17,
-                'nom' => 'producteur',
+                'nom' => 'produceur',
                 'dateNaissance' => '18 juillet 1967',
                 'lieuNaissance' => 'Alameda, Californie',
-                "type" => 'producteur',
+                "type" => 'produceur',
                 'photo' => 'https://imgs.search.brave.com/fm6ylgK2_LCP6wlPhxE3Rb0HH-Pr5c0IZpqXL9BcbOQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtaW4uYm1zY2Ru/LmNvbS9pZWRiL2Fy/dGlzdC9pbWFnZXMv/d2Vic2l0ZS9wb3N0/ZXIvbGFyZ2Uvdmlu/LWRpZXNlbC01MDA3/LTIyLTEyLTIwMTct/MTAtMTctMjMuanBn'
             ],
             [
                 'id' => 18,
-                'nom' => 'producteur',
+                'nom' => 'produceur',
                 'dateNaissance' => '18 juillet 1967',
                 'lieuNaissance' => 'Alameda, Californie',
-                "type" => 'producteur',
+                "type" => 'produceur',
                 'photo' => 'https://imgs.search.brave.com/fm6ylgK2_LCP6wlPhxE3Rb0HH-Pr5c0IZpqXL9BcbOQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtaW4uYm1zY2Ru/LmNvbS9pZWRiL2Fy/dGlzdC9pbWFnZXMv/d2Vic2l0ZS9wb3N0/ZXIvbGFyZ2Uvdmlu/LWRpZXNlbC01MDA3/LTIyLTEyLTIwMTct/MTAtMTctMjMuanBn'
             ],
         ]);
