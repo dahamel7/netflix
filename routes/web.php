@@ -32,7 +32,7 @@ Route::patch('/films/{film}/edit', [NetflixController::class, 'update'])->name('
 Route::get('/films/{film}/',[NetflixController::class,'show'])->name('films.show');
 Route::delete('/films/{id}', [NetflixController::class, 'destroy'])->name('films.destroy');
 
-Route::get('administration', [AdministrationController::class, 'index'])->name('administration.index');
+Route::get('administration', [AdministrationController::class, 'index'])->name('administration.index')->middleware('CheckRole:admin');
 
 Route::get('pokemons', [PokemonsController::class, 'index'])->name('pokemons.index');
 
@@ -44,21 +44,21 @@ Route::get('Personnes',
 [PersonnesController::class,'index'])->name('personnes.index');
 
 Route::get('/personnes/creation',
-[PersonnesController::class, 'create'])->name('personnes.create');
+[PersonnesController::class, 'create'])->name('personnes.create')->middleware('CheckRole:admin');;
 
 Route::post('/personnes',
-[PersonnesController::class, 'store'])->name('personnes.store');
+[PersonnesController::class, 'store'])->name('personnes.store')->middleware('CheckRole:admin');;
 
 
 
 Route::patch('/personnes/modifier/{personne}',
-[PersonnesController::class, 'update'])->name('personnes.update');
+[PersonnesController::class, 'update'])->name('personnes.update')->middleware('CheckRole:admin');;
 
 Route::get('/personnes/edit/{personne}',
-[PersonnesController::class, 'edit'])->name('personnes.edit');
+[PersonnesController::class, 'edit'])->name('personnes.edit')->middleware('CheckRole:admin');;
 
 Route::delete('/personnes/supprimer/{personne}',
-[PersonnesController::class, 'destroy'])->name('personnes.destroy');
+[PersonnesController::class, 'destroy'])->name('personnes.destroy')->middleware('CheckRole:admin');;
 
 
 Route::get('personne/{personne}',
@@ -67,22 +67,22 @@ Route::get('personne/{personne}',
 
 
 Route::patch('/usagers/modifier/{usager}',
-[UsagersController::class, 'update'])->name('usagers.update');
+[UsagersController::class, 'update'])->name('usagers.update')->middleware('CheckRole:admin');;
 
 Route::get('/Usager',
-[UsagersController::class,'index'])->name('usagers.index');
+[UsagersController::class,'index'])->name('usagers.index')->middleware('CheckRole:admin');;
 
 Route::get('/Usager/creation',
-[UsagersController::class,'create'])->name('usagers.create');
+[UsagersController::class,'create'])->name('usagers.create')->middleware('CheckRole:admin');;
 
 Route::post('/usagers',
-[UsagersController::class, 'store'])->name('usagers.store');
+[UsagersController::class, 'store'])->name('usagers.store')->middleware('CheckRole:admin');;
 
 Route::get('/usagers/edit/{usager}',
-[UsagersController::class, 'edit'])->name('usagers.edit');
+[UsagersController::class, 'edit'])->name('usagers.edit')->middleware('CheckRole:admin');;
 
 Route::delete('/usagers/supprimer/{usager}',
-[UsagersController::class, 'destroy'])->name('usagers.destroy');
+[UsagersController::class, 'destroy'])->name('usagers.destroy')->middleware('CheckRole:admin');;
 
 
 

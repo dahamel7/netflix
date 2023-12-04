@@ -18,13 +18,13 @@ class CheckRole
             $user = $request->user();
 
             if(!$user){
-                if(!$request->is('login')){
-                    return redirect()->route('login');
+                if(!$request->is('usagers.show')){
+                    return redirect()->route('usagers.show');
                 }
             }else{
                 if(!in_array($user->role,$role))
                 {
-                    return redirect()->route('login');
+                    return redirect()->route('usagers.show');
                 }
             }
 

@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix - Administration</title>
 </head>
+@auth
 <body>
     <form method="POST" action="{{route('films.storeRealisateur')}}">
         @csrf
@@ -74,6 +75,7 @@
     </form>
 
 </body>
+@endauth
 </html>
 
 @endsection
