@@ -9,7 +9,7 @@
     <a href="{{route('usagers.create')}}" class="btn btn-danger text-center " >ajouter un nouvel usager</a>
   </div>
 </div>
-  <table class="table text-center">
+  <table class="table text-center" id="formUsager">
   <thead>
     <tr>
     <th scope="col-1">Id</th>
