@@ -66,15 +66,23 @@ Route::get('personne/{personne}',
 
 
 
-
+Route::patch('/usagers/modifier/{usager}',
+[UsagersController::class, 'update'])->name('usagers.update');
 
 Route::get('/Usager',
 [UsagersController::class,'index'])->name('usagers.index');
 
 Route::get('/Usager/creation',
 [UsagersController::class,'create'])->name('usagers.create');
+
 Route::post('/usagers',
-[PersonnesController::class, 'store'])->name('usagers.store');
+[UsagersController::class, 'store'])->name('usagers.store');
+
+Route::get('/usagers/edit/{usager}',
+[UsagersController::class, 'edit'])->name('usagers.edit');
+
+Route::delete('/usagers/supprimer/{usager}',
+[UsagersController::class, 'destroy'])->name('usagers.destroy');
 
 
 

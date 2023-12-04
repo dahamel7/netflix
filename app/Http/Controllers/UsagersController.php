@@ -68,7 +68,7 @@ class UsagersController extends Controller
             $usager->save();
         }catch(\Throwable $e)
         {
-            Log::debug($e);
+            return redirect()->route('usagers.show');
         }
         return redirect()->route('/login');
     }
@@ -84,17 +84,31 @@ class UsagersController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Usager $usager)
     {
-        //
+        return View('usagers.edit', compact('usager'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UsagerRequest $request, Usager $usager)
     {
-        //
+        try{
+            $usager->nom = $request->nom;
+            $usager->nomUsager = $request->nomUsager;
+            $usager->prenom = $request->prenom;
+            $usager->email = $request->email;
+            $usager->role = $request->role;
+            $usager->password = $request->password;
+            $usager->save();
+            return redirect()->route('usagers.index')->with('message', "Modification de " . $usager->nom . " réussi!");
+        }catch(\Throwable $e)
+        {
+        
+            return redirect()->route('usagers.index')->with('message', "Modification de " . $usager->nom . "non");
+        }
+        return redirect()->route('usagers.index');
     }
 
     /**
@@ -102,6 +116,19 @@ class UsagersController extends Controller
      */
     public function destroy(string $id)
     {
-        //
-    }
+        try{
+        $usager= Usager::findOrFail($id);
+       
+            
+                  
+                 $usager->delete();
+                   return redirect()->route('usagers.index')->with('message', "Suppression de " . $usager->nomUsager . " réussi!");
+        }
+                   catch(\Throwable $e){
+                    //Gérer l'erreur
+       
+                    return redirect()->route('usagers.index')->withErrors(['la suppression n\'a pas fonctionné']); 
+                  }
+                     return redirect()->route('usagers.index');
+                }
 }

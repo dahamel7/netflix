@@ -30,10 +30,17 @@
                     <th scope="row"><?php echo $usager->id; ?></th>
                     <td><?php echo $usager->nomUsager; ?></td>
                     <td><?php echo $usager->role; ?></td>
-                    <td>fef</td>
-                    <td>fwefwe</td>
+                    <td><a href="{{route('usagers.edit', [$usager])}}" class="btn btn-success">modifier</a></td>
+                    <td>
+                      
+                    <form method="POST" action="{{route('usagers.destroy', [$usager->id]) }}">
+                           @csrf
+                    @method('DELETE')
+              <button type="submit" class="btn btn-danger">Supprimer</button>
+                </form>
+                  </td>
                     </tr>
-</tbody>
+                </tbody>
                   
                     
                   

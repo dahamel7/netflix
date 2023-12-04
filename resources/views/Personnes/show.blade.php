@@ -8,7 +8,7 @@
         
     }
     body {
-        background-image: url('{{ $personne->photo}}');
+        background-image: url('{{ asset('img/personnes/'. $personne->photo)}}');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -34,8 +34,13 @@
                         <p>Lieu de sa naissance - {{ $personne->lieuNaissance }}</p>
                     </div>
                     @role('admin')
-                    <div id="Modif"> 
-                    <a href="{{route('personnes.edit', [$personne])}}"><img src='https://mecanizadosdelvinalopo.com/wp-content/uploads/2017/06/mantenimiento-mecanizados-dise%C3%B1o-fabricacion-maquinaria-industrial-alicante-capacidades-mecanizados-vinalopo.png'  alt="modifier" id="modifier"></a>
+
+                    
+                    <div id="option"> 
+                        <a href="{{route('personnes.edit', [$personne])}}" id="liens">modifier</a>
+
+                        <a href="/Personnes" id="liens">Retour</a>
+
                     </div>
                     @endrole
                     <div id="option"> 

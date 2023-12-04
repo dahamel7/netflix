@@ -71,7 +71,7 @@ class PersonnesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Personne $personne)
     {
         return View('personnes.edit', compact('personne'));
     }
@@ -79,7 +79,7 @@ class PersonnesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(PersonneRequest $request, Personne $personne)
     {
         try{
             $personne->nom = $request->nom;
