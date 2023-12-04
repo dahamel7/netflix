@@ -3,7 +3,7 @@
         background-color: rgb(15 15 15/.85);
     }
     body {
-        background-image: url('{{ $film->pochette }}');
+        background-image: url("{{ asset('img/films/'. $film->pochette)}}");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -59,7 +59,7 @@
                 </div>
 
                 <div id="div_img">
-                    <img src="{{ $film->pochette }}" alt="<?php echo $film->titre; ?>" id="pochette">
+                    <img src="{{ asset('img/films/'. $film->pochette)}}" alt="<?php echo $film->titre; ?>" id="pochette">
                 </div>
             </div>
         @else

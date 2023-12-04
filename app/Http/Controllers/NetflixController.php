@@ -38,8 +38,8 @@ class NetflixController extends Controller
      */
     public function create()
     {
-        $personnes = Personne::where('type','realisateur')->get();
-        return View('films.create', compact('personnes'));
+        $realisateurs = Personne::where('type','realisateur')->get();
+        return View('films.create', compact('realisateurs'));
     }
 
     /**
@@ -113,9 +113,9 @@ class NetflixController extends Controller
      */
     public function edit(Film $film)
     {
-        $personnes = Personne::where('type','realisateur')->get();
+        $realisateurs = Personne::where('type','realisateur')->get();
 
-        return View('films.edit', compact('film', 'personnes'));
+        return View('films.edit', compact('film', 'realisateurs'));
     }
 
     /**
@@ -127,8 +127,20 @@ class NetflixController extends Controller
             $film->titre = $request->titre;
             $film->categorie = $request->categorie;
             $film->resume = $request->resume;
-            $film->pochette = $request->pochette;
-            $film->realisateur_id = $request->realisateur_id;
+            
+            $uploadedFile = $request->file('pochette');
+            $nomFichierUnique = str_replace(" ","_", $film->titre) . "-" . uniqid() . "." . $uploadedFile->extension();
+            //dd($request->all());
+            try {
+                $request->pochette->move(public_path('img/films'), $nomFichierUnique);
+                Log::debug("Copié.");
+            } catch(\Symfony\Component\HttpFoundation\File\Exception\FileException $e)
+            {
+                Log::error("Erreur lors du téleversement du fichier." , [$e]);
+            }
+            
+            $film->pochette = $nomFichierUnique;
+            $film->personne_id = $request->personne_id;
             $film->duree = $request->duree;
             $film->annee = $request->annee;
             $film->rating = $request->rating;

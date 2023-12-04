@@ -52,10 +52,10 @@
                 <div id="input_div">
                     <p id="inputLabel">Réalisateur</p>
                     
-                    <select id="inputAdmin" name="personnes_id">
+                    <select id="inputAdmin" name="personne_id">
                         <option value="" selected>Veuillez choisir un réalisateur</option>
-                        @foreach($personnes as $personne)
-                        <option value="{{ $personne->id }}">{{ $personne->nom }}</option>
+                        @foreach($realisateurs as $realisateur)
+                        <option value="{{ $realisateur->id }}">{{ $realisateur->nom }}</option>
                         @endforeach 
                     </select>
                 </div>

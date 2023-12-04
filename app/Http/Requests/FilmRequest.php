@@ -25,8 +25,8 @@ class FilmRequest extends FormRequest
             'titre' => 'required|min:3|max:100',
             'categorie' => 'required|min:5|max:64',
             'resume' => 'required|min:24|max:1048',
-            'pochette' => 'required|image|mimes:png,jpeg,jpg,gif|max:4096',
-            'personnes_id' => 'required',
+            'pochette' => 'required|image|mimes:png,jpeg,jpg,gif,webp,jfif|max:4096',
+            'personne_id' => 'required',
             'duree' => 'required|integer',
             'annee' => 'required|integer',
             'rating' => 'required'

@@ -16,7 +16,7 @@
 
                <div id="input_div">
                   <span></span>
-                  <h5>Ajout d'un Usager</h5>
+                  <h5>Création de compte</h5>
                </div>
 
                <div id="input_div">

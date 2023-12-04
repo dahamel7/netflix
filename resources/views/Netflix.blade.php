@@ -15,7 +15,7 @@
                   <?php $ctr++;
                   ?>
                     <div id="div_box">
-                      <a href="{{route('films.show', [$film])}}"><img src='<?php echo $film->pochette; ?>' alt="<?php echo $film->titre; ?>"></a>
+                      <a href="{{route('films.show', [$film])}}"><img src="{{ asset('img/films/'. $film->pochette)}}" alt="<?php echo $film->titre; ?>"></a>
                       <h3 id="div_box_titre"><?php echo $film->titre; ?></h3>
                       <p id="div_box_annee">Rating - <?php echo $film->rating; ?>/10</p>
                       <p id="div_box_annee"><?php echo $film->annee; ?></p>
@@ -40,7 +40,7 @@
                     if($ctr <= 6) {
                   ?>
                     <div id="div_box">
-                      <a href="{{route('films.show', [$film])}}"><img src='<?php echo $film->pochette; ?>' alt="<?php echo $film->titre; ?>"></a>
+                      <a href="{{route('films.show', [$film])}}"><img src="{{ asset('img/films/'. $film->pochette)}}" alt="<?php echo $film->titre; ?>"></a>
                       <h3 id="div_box_titre"><?php echo $film->titre; ?></h3>
                       <p id="div_box_annee">Rating - <?php echo $film->rating; ?>/10</p>
                       <p id="div_box_annee"><?php echo $film->annee; ?></p>
@@ -63,7 +63,7 @@
                     if($ctr <= 6) {
                   ?>
                     <div id="div_box">
-                      <a href="{{route('films.show', [$film])}}"><img src='<?php echo $film->pochette; ?>' alt="<?php echo $film->titre; ?>"></a>
+                      <a href="{{route('films.show', [$film])}}"><img src="{{ asset('img/films/'. $film->pochette)}}" alt="<?php echo $film->titre; ?>"></a>
                       <h3 id="div_box_titre"><?php echo $film->titre; ?></h3>
                       <p id="div_box_annee">Rating - <?php echo $film->rating; ?>/10</p>
                       <p id="div_box_annee"><?php echo $film->annee; ?></p>
@@ -83,14 +83,16 @@
               <?php $ctr = 0; ?>
                 @foreach($plusPopulaire as $film)
                   <?php $ctr++;
+                    if($ctr <= 6) {
                   ?>
                     <div id="div_box">
-                      <a href="{{route('films.show', [$film])}}"><img src='<?php echo $film->pochette; ?>' alt="<?php echo $film->titre; ?>"></a>
+                      <a href="{{route('films.show', [$film])}}"><img src="{{ asset('img/films/'. $film->pochette)}}" alt="<?php echo $film->titre; ?>"></a>
                       <h3 id="div_box_titre"><?php echo $film->titre; ?></h3>
                       <p id="div_box_annee">Rating - <?php echo $film->rating; ?>/10</p>
                       <p id="div_box_annee"><?php echo $film->annee; ?></p>
                     </div>
                   <?php 
+                    }
                   ?>
                 @endforeach
             @else
@@ -107,7 +109,7 @@
                     if($ctr <= 6) {
                   ?>
                     <div id="div_box">
-                      <a href="{{route('films.show', [$film])}}"><img src='<?php echo $film->pochette; ?>' alt="<?php echo $film->titre; ?>"></a>
+                      <a href="{{route('films.show', [$film])}}"><img src="{{ asset('img/films/'. $film->pochette)}}" alt="<?php echo $film->titre; ?>"></a>
                       <h3 id="div_box_titre"><?php echo $film->titre; ?></h3>
                       <p id="div_box_annee">Rating - <?php echo $film->rating; ?>/10</p>
                       <p id="div_box_annee"><?php echo $film->annee; ?></p>
