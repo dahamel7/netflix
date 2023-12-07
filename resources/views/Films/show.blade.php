@@ -54,6 +54,16 @@
                         <p>{{ $film->resume }}</p>
                     </div>
                     <div id="div_details_film_personne">
+                        
+                    @if(count($related_personnes))
+                        @foreach($related_personnes as $personne)
+                            <p>{{ $personne->nom }}</p>
+                            <p>{{ $personne->type }}</p>
+                            <p>{{ $personne->photo }}</p>
+                        @endforeach
+                    @else
+                        <p>Aucun acteur à affiché.</p>
+                    @endif              
 
                     </div>
                 </div>

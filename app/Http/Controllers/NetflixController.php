@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Film;
 use App\Models\Personne;
+use App\Models\FilmPersonne;
 use Illuminate\Support\Facades\Log;
 use App\Http\Requests\FilmRequest;
 
@@ -81,7 +82,7 @@ class NetflixController extends Controller
                 
                 /*Verifier si la relation existe*/
                 if($film->film_personne->contains($realisateur)) {
-                    return redirect()->route('personnes.index')->withErrors(['Relation existe!']);
+                    return redirect()->route('personnes.index')->withErrors(['La relation existe déjà!']);
                 }
                 else {
                     $film->realisateur()->attach($realisateur);
@@ -104,8 +105,14 @@ class NetflixController extends Controller
      */
     public function show(Film $film)
     {
-        //
-        return View('films.show', compact('film'));
+        $personnes = Personne::all();
+        $films_id = FilmPersonne::where('film_id', $film->id)->get();
+        $personnes_id = FilmPersonne::where('film_id', $film->id)->pluck('personne_id');
+    
+        $related_personnes = Personne::whereIn('id', $personnes_id)->get();
+
+
+        return View('films.show', compact('film', 'films_id', 'related_personnes'));
     }
 
     /**

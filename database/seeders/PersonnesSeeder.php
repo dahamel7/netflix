@@ -64,7 +64,7 @@ class PersonnesSeeder extends Seeder
             ],
             [
                 'id' => 7,
-                'nom' => 'test',
+                'nom' => 'Realisateur1',
                 'dateNaissance' => '7 janvier 1964',
                 'lieuNaissance' => 'Long Beach, Californie',
                 "type" => 'realisateur',
@@ -72,7 +72,7 @@ class PersonnesSeeder extends Seeder
             ],
             [
                 'id' => 8,
-                'nom' => 'test',
+                'nom' => 'Realisateur2',
                 'dateNaissance' => '7 janvier 1964',
                 'lieuNaissance' => 'Long Beach, Californie',
                 "type" => 'realisateur',
@@ -80,7 +80,7 @@ class PersonnesSeeder extends Seeder
             ],
             [
                 'id' => 9,
-                'nom' => 'test',
+                'nom' => 'Realisateur3',
                 'dateNaissance' => '7 janvier 1964',
                 'lieuNaissance' => 'Long Beach, Californie',
                 "type" => 'realisateur',
@@ -88,7 +88,7 @@ class PersonnesSeeder extends Seeder
             ],
             [
                 'id' => 10,
-                'nom' => 'test',
+                'nom' => 'Realisateur4',
                 'dateNaissance' => '7 janvier 1964',
                 'lieuNaissance' => 'Long Beach, Californie',
                 "type" => 'realisateur',
@@ -96,7 +96,7 @@ class PersonnesSeeder extends Seeder
             ],
             [
                 'id' => 11,
-                'nom' => 'test',
+                'nom' => 'Realisateur5',
                 'dateNaissance' => '7 janvier 1964',
                 'lieuNaissance' => 'Long Beach, Californie',
                 "type" => 'realisateur',
@@ -104,7 +104,7 @@ class PersonnesSeeder extends Seeder
             ],
             [
                 'id' => 12,
-                'nom' => 'test',
+                'nom' => 'Realisateur6',
                 'dateNaissance' => '7 janvier 1964',
                 'lieuNaissance' => 'Long Beach, Californie',
                 "type" => 'realisateur',
