@@ -37,8 +37,13 @@
                </div>
 
                <div id="input_div">
-                  <label for="type" id="inputLabel">Role de l'usager</label>
-                  <select id="inputAdmin" name="type">
+                  <label for="email" id="inputLabel">Email</label>
+                  <input type="email" id="inputAdmin" placeholder="nom d'usager" name="email" value="<?php echo $usager->email; ?>">
+               </div>
+
+               <div id="input_div">
+                  <label for="role" id="inputLabel">Role de l'usager</label>
+                  <select id="inputAdmin" name="role">
                      <option value="" selected>Veuillez choisir un role</option>
                      <option value="enfant">enfant</option>
                      <option value="normal">normal</option>
@@ -50,7 +55,7 @@
                
                <div id="input_div">
                   <label for="password" id="inputLabel">Mot de passe</label>
-                  <input type="password" id="inputAdmin" placeholder="Mot de passe" name="password" value="<?php echo $usager->password; ?>">
+                  <input type="password" id="inputAdmin" placeholder="Mot de passe" name="password" >
                </div>
 
                <div id="input_div">

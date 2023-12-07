@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Usager;
 use App\Http\Requests\UsagerRequest;
+use Illuminate\Support\Facades\Hash;
+use Log;
 
 class UsagersController extends Controller
 {
@@ -64,13 +66,20 @@ class UsagersController extends Controller
     {
         try{
             $usager = new Usager($request->all());
-    
+          
+            $usager->password = Hash::make($request->password);
+            if($request->password == $request->cpassword)
+            {
             $usager->save();
+            }else{
+                return View('usagers.create')->with('message', "Le mot de passe est invalide");;
+            }
         }catch(\Throwable $e)
         {
+            Log::debug($e);
             return redirect()->route('usagers.show');
         }
-        return redirect()->route('/login');
+        return redirect()->route('personnes.index');
     }
 
     /**
@@ -100,8 +109,13 @@ class UsagersController extends Controller
             $usager->prenom = $request->prenom;
             $usager->email = $request->email;
             $usager->role = $request->role;
-            $usager->password = $request->password;
+            $usager->password = Hash::make($request->password);
+            if($request->password == $request->cpassword)
+            {
             $usager->save();
+            }else{
+                return View('usagers.edit')->with('message', "Le mot de passe est invalide");;
+            }
             return redirect()->route('usagers.index')->with('message', "Modification de " . $usager->nom . " réussi!");
         }catch(\Throwable $e)
         {

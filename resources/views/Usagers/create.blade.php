@@ -33,10 +33,14 @@
                   <label for="nomUsager" id="inputLabel">Nom d'usager</label>
                   <input type="text" id="inputAdmin" placeholder="nom d'usager" name="nomUsager">
                </div>
+               <div id="input_div">
+                  <label for="email" id="inputLabel">Email</label>
+                  <input type="email" id="inputAdmin" placeholder="nom d'usager" name="email">
+               </div>
 
                <div id="input_div">
                   <label for="type" id="inputLabel">Role de l'usager</label>
-                  <select id="inputAdmin" name="type">
+                  <select id="inputAdmin" name="role">
                      <option value="" selected>Veuillez choisir un role</option>
                      <option value="enfant">enfant</option>
                      <option value="normal">normal</option>

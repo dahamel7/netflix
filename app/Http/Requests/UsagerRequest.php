@@ -22,7 +22,27 @@ class UsagerRequest extends FormRequest
     public function rules(): array
     {
         return [
+                'nom'  => 'required|min:5',
+                'nomUsager'  => 'required|min:5' ,
+                'prenom'  => 'required|min:5',
+                'email'  => 'min:10' ,
+                "role"  => 'required|min:5',
+                'password'   => 'required|min:5'
             
+        ];
+    }
+    public function message()
+    {
+        return[
+            'nom.min' => 'Le nom doit avoir 5 caractères.',
+            'nom.required'=> 'le nom est requis',
+            'nomUsager.min' => 'Le lieu doit avoir minimum 5 caractères.',
+            'nomUsager.required' => 'le nom d\'usager est requis',
+            'email.min' => 'L email doit avoir minimum 10 caractères.',
+            'role.required' => 'le role est requis',
+            'role.min' => 'le role doit avoir minimum 5 caractères.',
+            'password.required' => 'le mot de passe est requis',
+            'password.required' => 'le mot de passe doit avoir minimum 5 caractères.',
             
         ];
     }
