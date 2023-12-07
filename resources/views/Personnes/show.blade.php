@@ -43,10 +43,7 @@
 
                     </div>
                     @endrole
-                    <div id="option"> 
-                        <p>Info</p>
-                        <p>Film</p>
-                    </div>
+                    
 
                     <div id="div_details_film_synopsis">
                      

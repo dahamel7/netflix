@@ -1,10 +1,32 @@
-
+<style>
+    .wrapper{
+        background-color: rgb(15 15 15/.85);
+        
+    }
+    body {
+        background-image: url("{{ asset('img/personnes/'. $personne->photo)}}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" style="text/css" href="../../app.css">
+    <title>Netflix - Modification de {{$personne->nom}}</title>
+</head>
 @extends('layouts.app')
 
    
 @section('contenu')
 
 @if (isset($personne))
+           
+<section class="main-container">
+            <div class="location" id="home">
+                <div id="div_box_film_edit">
+                    <span></span>
+                    <div id="div_details">
 <form method="post" action="{{ route('personnes.update',[$personne]) }}"  enctype="multipart/form-data">
 @csrf
 @method('PATCH')
@@ -21,8 +43,9 @@
 
        <div id="input_div">
           <span></span>
-          <h5>Ajout d'une Personne</h5>
+    
        </div>
+
 
        <div id="input_div">
           <label for="nom" id="inputLabel">Nom de la personne</label>
@@ -57,6 +80,11 @@
        <div id="input_div">
           <span></span>
           <button type="submit" id="inputAdminEnregistrer">Enregistrer</button>
+          <form method="POST" action="{{route('personnes.destroy', [$personne->id]) }}">
+         @csrf
+         @method('DELETE')
+         <button type="submit" >Supprimer</button>
+         </form>
        </div>
 
        </div>
@@ -71,12 +99,11 @@
 
 
 </form>
+</div>
+</div>
+</div>
+   </section>
 
-<form method="POST" action="{{route('personnes.destroy', [$personne->id]) }}">
-    @csrf
-    @method('DELETE')
-    <button type="submit" class="btn btn-danger">Supprimer</button>
-</form>
 
  @else
             <h1>La personne n'existe pas</h1>
