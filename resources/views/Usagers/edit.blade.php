@@ -4,6 +4,7 @@
    
 @section('contenu')
 
+
 <form method="post" action="{{ route('usagers.update',[$usager]) }}"  enctype="multipart/form-data">
 @csrf
 @method('PATCH')
