@@ -80,7 +80,15 @@
        <div id="input_div">
           <span></span>
           <button type="submit" id="inputAdminEnregistrer">Enregistrer</button>
-          <form method="POST" action="{{route('personnes.destroy', [$personne->id]) }}">
+
+
+    
+
+
+
+</form>
+
+<form method="POST" action="{{route('personnes.destroy', [$personne->id]) }}">
          @csrf
          @method('DELETE')
          <button type="submit" >Supprimer</button>
@@ -89,16 +97,6 @@
 
        </div>
 
- <div class="col-3"></div>
-
-</div>
-
-</div>
-
-
-
-
-</form>
 </div>
 </div>
 </div>

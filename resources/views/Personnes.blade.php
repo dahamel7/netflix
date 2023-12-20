@@ -41,15 +41,15 @@
               <?php $ctr = 0; ?>
                 @foreach($realisateurs as $personne)
                   <?php $ctr++;
-                    if($ctr <= 6) {
+                  
                   ?>
                     <div id="div_box">
-                      <a href="{{route('personnes.show', [$personne])}}"><img src='<?php echo $personne->photo; ?>' alt="<?php echo $personne->nom; ?>"></a>
+                      <a href="{{route('personnes.show', [$personne])}}"><img src="{{ asset('img/personnes/'. $personne->photo)}}" alt="<?php echo $personne->nom; ?>"></a>
                       <h3 id="div_box_titre"><?php echo $personne->nom; ?></h3>
                       
                     </div>
                   <?php 
-                    }
+                    
                   ?>
                 @endforeach
             @else
@@ -60,21 +60,21 @@
 
  
 
-      <h1 id="myList">Produceur</h1>
+      <h1 id="myList">Producteur</h1>
       <div class="box">
       @if(count($produceurs))
-              <?php $ctr = 0; ?>
+           
                 @foreach($produceurs as $personne)
                   <?php $ctr++;
-                    if($ctr <= 6) {
+                  
                   ?>
                     <div id="div_box">
-                      <a href="{{route('personnes.show', [$personne])}}"><img src='<?php echo $personne->photo; ?>' alt="<?php echo $personne->nom; ?>"></a>
+                      <a href="{{route('personnes.show', [$personne])}}"><img src="{{ asset('img/personnes/'. $personne->photo)}}" alt="<?php echo $personne->nom; ?>"></a>
                       <h3 id="div_box_titre"><?php echo $personne->nom; ?></h3>
                     
                     </div>
                   <?php 
-                    }
+                    
                   ?>
                 @endforeach
             @else

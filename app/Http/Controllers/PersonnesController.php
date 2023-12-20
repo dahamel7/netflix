@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Personne;
 use App\Models\Film;
+use App\Models\FilmPersonne;
 use App\Http\Requests\PersonneRequest;
+use Log;
 
 class PersonnesController extends Controller
 {
@@ -65,7 +67,12 @@ class PersonnesController extends Controller
      */
     public function show(Personne $personne)
     {
-        return view('personnes.show', compact('personne'));
+        $films = Film::all();
+        $films_id = FilmPersonne::where('personne_id', $personne->id)->pluck('film_id');
+        $personnes_id = FilmPersonne::where('film_id', $personne->id)->get();
+    
+        $related_films = Film::whereIn('id', $films_id)->get();
+        return view('personnes.show', compact('personne','personnes_id', 'related_films'));
     }
 
     /**
@@ -86,7 +93,17 @@ class PersonnesController extends Controller
             $personne->dateNaissance = $request->dateNaissance;
             $personne->lieuNaissance = $request->lieuNaissance;
             $personne->type = $request->type;
-            $personne->photo = $request->photo;
+            $uploadedFile = $request->file('photo');
+            $nomFichierUnique = str_replace(" ","_", $personne->nom) . "-". uniqid() . "." . $uploadedFile->extension();
+            try{
+                $request->photo->move(public_path('img/personnes'), $nomFichierUnique);
+            }catch(\Symfony\Component\HttpFoundation\File\Exception\FileException $e)
+            {
+                log::error("Erreur lors du téleversement du fichier." , $e);
+            }
+
+
+            $personne->photo = $nomFichierUnique;
             $personne->save();
             return redirect()->route('personnes.index')->with('message', "Modification de " . $personne->nom . " réussi!");
         }catch(\Throwable $e)
@@ -112,7 +129,7 @@ class PersonnesController extends Controller
           }
           catch(\Throwable $e){
              //Gérer l'erreur
-
+             Log::debug($e);
              return redirect()->route('personnes.index')->withErrors(['la suppression n\'a pas fonctionné']); 
            }
               return redirect()->route('personnes.index');

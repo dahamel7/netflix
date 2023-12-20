@@ -64,99 +64,99 @@ class PersonnesSeeder extends Seeder
             ],
             [
                 'id' => 7,
-                'nom' => 'Realisateur1',
-                'dateNaissance' => '7 janvier 1964',
-                'lieuNaissance' => 'Long Beach, Californie',
+                'nom' => 'Chad Stahelski',
+                'dateNaissance' => '20 septembre 1968',
+                'lieuNaissance' => 'Fort Worth, Texas',
                 "type" => 'realisateur',
-                'photo' => 'https://cdn.britannica.com/64/135864-050-57268027/Nicolas-Cage-2009.jpg'
+                'photo' => 'Chad_Stahelski-65833d72ebae3.jpg'
             ],
             [
                 'id' => 8,
-                'nom' => 'Realisateur2',
-                'dateNaissance' => '7 janvier 1964',
-                'lieuNaissance' => 'Long Beach, Californie',
+                'nom' => 'Christopher McQuarrie',
+                'dateNaissance' => '31 mai 1968',
+                'lieuNaissance' => 'Princeton, New Jersey',
                 "type" => 'realisateur',
-                'photo' => 'https://cdn.britannica.com/64/135864-050-57268027/Nicolas-Cage-2009.jpg'
+                'photo' => 'Christopher_McQuarrie-65833e415567b.jpg'
             ],
             [
                 'id' => 9,
-                'nom' => 'Realisateur3',
-                'dateNaissance' => '7 janvier 1964',
-                'lieuNaissance' => 'Long Beach, Californie',
+                'nom' => 'Robert Cohen',
+                'dateNaissance' => '12 mars 1949',
+                'lieuNaissance' => 'Cornwall, État de New York',
                 "type" => 'realisateur',
-                'photo' => 'https://cdn.britannica.com/64/135864-050-57268027/Nicolas-Cage-2009.jpg'
+                'photo' => 'Robert_Cohen-65833f03ef559.jpg'
             ],
             [
                 'id' => 10,
-                'nom' => 'Realisateur4',
-                'dateNaissance' => '7 janvier 1964',
-                'lieuNaissance' => 'Long Beach, Californie',
+                'nom' => 'Chris McKay',
+                'dateNaissance' => '11 novembre 1973',
+                'lieuNaissance' => 'Winter Park',
                 "type" => 'realisateur',
-                'photo' => 'https://cdn.britannica.com/64/135864-050-57268027/Nicolas-Cage-2009.jpg'
+                'photo' => 'Chris_McKay-65833f93f1235.jpg'
             ],
             [
                 'id' => 11,
-                'nom' => 'Realisateur5',
-                'dateNaissance' => '7 janvier 1964',
-                'lieuNaissance' => 'Long Beach, Californie',
+                'nom' => 'Patrick Wilson',
+                'dateNaissance' => '3 juillet 1973',
+                'lieuNaissance' => 'Norfolk ',
                 "type" => 'realisateur',
-                'photo' => 'https://cdn.britannica.com/64/135864-050-57268027/Nicolas-Cage-2009.jpg'
+                'photo' => 'Patrick_Wilson-6583404a7c2af.jpg'
             ],
             [
                 'id' => 12,
-                'nom' => 'Realisateur6',
-                'dateNaissance' => '7 janvier 1964',
-                'lieuNaissance' => 'Long Beach, Californie',
+                'nom' => 'Matt Bettinelli-Olpin',
+                'dateNaissance' => '19 février 1978',
+                'lieuNaissance' => 'Californie',
                 "type" => 'realisateur',
-                'photo' => 'https://cdn.britannica.com/64/135864-050-57268027/Nicolas-Cage-2009.jpg'
+                'photo' => 'Matt_Bettinelli-Olpin-658340bda4ffa.jpg'
             ],
             [
                 'id' => 13,
-                'nom' => 'producteur',
-                'dateNaissance' => '18 juillet 1967',
-                'lieuNaissance' => 'Alameda, Californie',
-                "type" => 'producteur',
-                'photo' => 'https://imgs.search.brave.com/fm6ylgK2_LCP6wlPhxE3Rb0HH-Pr5c0IZpqXL9BcbOQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtaW4uYm1zY2Ru/LmNvbS9pZWRiL2Fy/dGlzdC9pbWFnZXMv/d2Vic2l0ZS9wb3N0/ZXIvbGFyZ2Uvdmlu/LWRpZXNlbC01MDA3/LTIyLTEyLTIwMTct/MTAtMTctMjMuanBn'
+                'nom' => 'Francis Ford Coppola',
+                'dateNaissance' => '7 avril 1939',
+                'lieuNaissance' => 'Détroit, Michigan',
+                "type" => 'produceur',
+                'photo' => 'Francis_Ford_Coppola-65834907d6ef9.jpg'
             ],
             [
                 'id' => 14,
-                'nom' => 'producteur',
+                'nom' => 'Gale_Anne_Hurd',
                 'dateNaissance' => '18 juillet 1967',
-                'lieuNaissance' => 'Alameda, Californie',
+                'lieuNaissance' => 'Los Angeles (Californie)',
                 "type" => 'produceur',
-                'photo' => 'https://imgs.search.brave.com/fm6ylgK2_LCP6wlPhxE3Rb0HH-Pr5c0IZpqXL9BcbOQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtaW4uYm1zY2Ru/LmNvbS9pZWRiL2Fy/dGlzdC9pbWFnZXMv/d2Vic2l0ZS9wb3N0/ZXIvbGFyZ2Uvdmlu/LWRpZXNlbC01MDA3/LTIyLTEyLTIwMTct/MTAtMTctMjMuanBn'
+                'photo' => 'Gale_Anne_Hurd-6583487660334.jpg'
             ],
             [
                 'id' => 15,
-                'nom' => 'producteur',
-                'dateNaissance' => '18 juillet 1967',
-                'lieuNaissance' => 'Alameda, Californie',
+                'nom' => 'George Lucas',
+                'dateNaissance' => '14 mai 1944',
+                'lieuNaissance' => 'Modesto, Californie',
                 "type" => 'produceur',
-                'photo' => 'https://imgs.search.brave.com/fm6ylgK2_LCP6wlPhxE3Rb0HH-Pr5c0IZpqXL9BcbOQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtaW4uYm1zY2Ru/LmNvbS9pZWRiL2Fy/dGlzdC9pbWFnZXMv/d2Vic2l0ZS9wb3N0/ZXIvbGFyZ2Uvdmlu/LWRpZXNlbC01MDA3/LTIyLTEyLTIwMTct/MTAtMTctMjMuanBn'
+                'photo' => 'George_Lucas-6583496de1b3f.jpg'
             ],
             [
                 'id' => 16,
-                'nom' => 'produceur',
-                'dateNaissance' => '18 juillet 1967',
-                'lieuNaissance' => 'Alameda, Californie',
+                'nom' => 'Kathleen Kennedy',
+                'dateNaissance' => '5 juin 1953',
+                'lieuNaissance' => 'Berkeley, Californie',
                 "type" => 'produceur',
-                'photo' => 'https://imgs.search.brave.com/fm6ylgK2_LCP6wlPhxE3Rb0HH-Pr5c0IZpqXL9BcbOQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtaW4uYm1zY2Ru/LmNvbS9pZWRiL2Fy/dGlzdC9pbWFnZXMv/d2Vic2l0ZS9wb3N0/ZXIvbGFyZ2Uvdmlu/LWRpZXNlbC01MDA3/LTIyLTEyLTIwMTct/MTAtMTctMjMuanBn'
+                'photo' => 'Kathleen_Kennedy-65834a223b598.jpg'
             ],
             [
                 'id' => 17,
-                'nom' => 'produceur',
-                'dateNaissance' => '18 juillet 1967',
-                'lieuNaissance' => 'Alameda, Californie',
+                'nom' => 'Phoebe Waller-Bridge',
+                'dateNaissance' => '14 juillet 1985',
+                'lieuNaissance' => 'Londres, Angleterre',
                 "type" => 'produceur',
-                'photo' => 'https://imgs.search.brave.com/fm6ylgK2_LCP6wlPhxE3Rb0HH-Pr5c0IZpqXL9BcbOQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtaW4uYm1zY2Ru/LmNvbS9pZWRiL2Fy/dGlzdC9pbWFnZXMv/d2Vic2l0ZS9wb3N0/ZXIvbGFyZ2Uvdmlu/LWRpZXNlbC01MDA3/LTIyLTEyLTIwMTct/MTAtMTctMjMuanBn'
+                'photo' => 'Phoebe_Waller-Bridge-65834aeec6a4c.png'
             ],
             [
                 'id' => 18,
-                'nom' => 'produceur',
-                'dateNaissance' => '18 juillet 1967',
-                'lieuNaissance' => 'Alameda, Californie',
+                'nom' => 'Joel Silver',
+                'dateNaissance' => '14 juillet 1952',
+                'lieuNaissance' => 'South Orange, New Jersey',
                 "type" => 'produceur',
-                'photo' => 'https://imgs.search.brave.com/fm6ylgK2_LCP6wlPhxE3Rb0HH-Pr5c0IZpqXL9BcbOQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtaW4uYm1zY2Ru/LmNvbS9pZWRiL2Fy/dGlzdC9pbWFnZXMv/d2Vic2l0ZS9wb3N0/ZXIvbGFyZ2Uvdmlu/LWRpZXNlbC01MDA3/LTIyLTEyLTIwMTct/MTAtMTctMjMuanBn'
+                'photo' => 'Joel_Silver-65834b9a4c95e.jpg'
             ],
         ]);
     }

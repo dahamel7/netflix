@@ -46,7 +46,14 @@
                     
 
                     <div id="div_details_film_synopsis">
-                     
+                      @if(count($related_films))
+                        @foreach($related_films as $film)
+                            <p>{{ $$film->titre }}</p>
+                        
+                        @endforeach
+                    @else
+                        <p>Aucun acteur à affiché.</p>
+                    @endif              
                     </div>
                     <div id="div_details_film_personne">
 
