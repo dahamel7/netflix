@@ -14,9 +14,5 @@ class FilmPersonne extends Model
     public function film_personne_relations() : BelongsToMany {
         return $this->BelongsToMany();
     }
-
-    /*
-    INSERT INTO `film_personnes` (film_id, personne_id)
-    VALUES (1, 1);
-    */
+    
 }

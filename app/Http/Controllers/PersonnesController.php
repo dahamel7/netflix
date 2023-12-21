@@ -7,7 +7,7 @@ use App\Models\Personne;
 use App\Models\Film;
 use App\Models\FilmPersonne;
 use App\Http\Requests\PersonneRequest;
-use Log;
+use Illuminate\Support\Facades\Log;
 
 class PersonnesController extends Controller
 {
@@ -68,10 +68,11 @@ class PersonnesController extends Controller
     public function show(Personne $personne)
     {
         $films = Film::all();
+        $personnes_id = FilmPersonne::where('personne_id', $personne->id)->get();
         $films_id = FilmPersonne::where('personne_id', $personne->id)->pluck('film_id');
-        $personnes_id = FilmPersonne::where('film_id', $personne->id)->get();
     
         $related_films = Film::whereIn('id', $films_id)->get();
+
         return view('personnes.show', compact('personne','personnes_id', 'related_films'));
     }
 

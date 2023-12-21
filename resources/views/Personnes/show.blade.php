@@ -49,7 +49,6 @@
                       @if(count($related_films))
                         @foreach($related_films as $film)
                             <p>{{ $$film->titre }}</p>
-                        
                         @endforeach
                     @else
                         <p>Aucun acteur à affiché.</p>

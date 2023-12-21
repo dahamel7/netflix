@@ -43,34 +43,46 @@
                     </div>
 
                     <div id="option"> 
+                        @role('admin')
                         <a href="{{route('films.edit',[$film]) }}" id="liens">Editer le film</a>
-
+                        @endrole
                         <a href="/" id="liens">Retour aux Films</a>
-
                     </div>
 
                     <div id="div_details_film_synopsis">
                         <p>Synopsis: </p>
                         <p>{{ $film->resume }}</p>
                     </div>
-                    <div id="div_details_film_personne">
-                        
-                    @if(count($related_personnes))
-                        @foreach($related_personnes as $personne)
-                            <p>{{ $personne->nom }}</p>
-                            <p>{{ $personne->type }}</p>
-                            <p>{{ $personne->photo }}</p>
-                        @endforeach
-                    @else
-                        <p>Aucun acteur à affiché.</p>
-                    @endif              
-
+                    
+                    <p>Casting:</p>
+                    <div id="div_details_box">
+                        @if(count($related_personnes))
+                            @foreach($related_personnes as $personne)
+                            <div id="div_details_film_personnes">
+                                <a href="{{route('personnes.show', [$personne])}}"><img src="{{ asset('img/personnes/'. $personne->photo)}}" alt="{{$personne->photo}}?>" id="FilmPersonneImg"></a>
+                                <p>{{ $personne->nom }}</p>
+                                <p>{{ $personne->type }}</p>
+                        @role('admin')
+                                <form method="POST" action="{{route('films.jointureDelete', [$personne->id]) }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" >Supprimer</button>
+                                </form>
+                                <a href="" id="liens">Retirer</a>
+                        @endrole
+                            </div>
+                            @endforeach
+                        @else
+                            <p>Aucun acteur à affiché.</p>
+                        @endif
                     </div>
+                            
                 </div>
 
                 <div id="div_img">
                     <img src="{{ asset('img/films/'. $film->pochette)}}" alt="<?php echo $film->titre; ?>" id="pochette">
                 </div>
+                
             </div>
         @else
             <h1>Le film n'existe pas</h1>

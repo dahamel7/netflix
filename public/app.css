@@ -242,6 +242,26 @@
     color: #686868;
   }
 
+  #div_details_box {
+    width: 560px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #div_details_film_personnes {
+    width: 128px;
+  }
+
+  #div_details_film_personnes img {
+    object-fit: cover;
+    height: 84px;
+    width: 84px;
+  }
+
+  #div_details_film_personnes p {
+    margin: 0px;
+  }
+
   #option {
     display: grid;
     grid-gap: 10%;

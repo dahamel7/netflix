@@ -89,10 +89,10 @@
 </form>
 
 <form method="POST" action="{{route('personnes.destroy', [$personne->id]) }}">
-         @csrf
-         @method('DELETE')
-         <button type="submit" >Supprimer</button>
-         </form>
+   @csrf
+   @method('DELETE')
+   <button type="submit" >Supprimer</button>
+</form>
        </div>
 
        </div>

@@ -31,6 +31,7 @@ Route::get('/films/edit/{film}', [NetflixController::class, 'edit'])->name('film
 Route::patch('/films/{film}/edit', [NetflixController::class, 'update'])->name('films.update');
 Route::get('/films/{film}/',[NetflixController::class,'show'])->name('films.show');
 Route::delete('/films/{id}', [NetflixController::class, 'destroy'])->name('films.destroy');
+Route::delete('/films/{id}', [NetflixController::class,'jointureDelete'])->name('films.jointureDelete');
 
 Route::get('administration', [AdministrationController::class, 'index'])->name('administration.index')->middleware('CheckRole:admin');
 

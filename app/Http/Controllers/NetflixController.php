@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Film;
 use App\Models\Personne;
 use App\Models\FilmPersonne;
-use Illuminate\Support\Facades\Log;
 use App\Http\Requests\FilmRequest;
+use Illuminate\Support\Facades\Log;
 
 class NetflixController extends Controller
 {
@@ -19,7 +19,6 @@ class NetflixController extends Controller
         $films = Film::all();
 
         $personnes = Personne::all();
-
 
         $filmsAction = Film::where('categorie','action')->get();
 
@@ -175,6 +174,22 @@ class NetflixController extends Controller
             
             $film->delete();
             return redirect()->route('netflix.index')->with('message', "Suppression de " . $film->titre . " réussi!");
+        }
+        catch(\Throwable $e){
+            //Gérer l'erreur
+            Log::debug($e);
+            return redirect()->route('netflix.index')->withErrors([$id . ' La suppression de ' . $film->titre . ' n\'a pas fonctionnée.']); 
+        }
+        return redirect()->route('netflix.index');
+    }
+
+    public function jointureDelete($id)
+    {
+        try{
+            $jointure = FilmPersonne::findOrFail($id);
+
+            $jointure->delete();
+            return redirect()->route('netflix.index')->with('message', "Suppression de la jointure réussi!");
         }
         catch(\Throwable $e){
             //Gérer l'erreur
